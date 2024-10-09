@@ -1,12 +1,32 @@
-import Card from "./card";
+import left from "../../public/assets/left.svg";
+import slideleft from "../../public/assets/slideleft.svg";
+import slideright from "../../public/assets/slideright.svg";
 
 export default function Pokemon({ pokemon }) {
   console.log("TypesLength", pokemon.types.length);
   console.log("Pokemon", pokemon.name);
+  console.log("left", left);
 
   return (
     <>
-      <h2 className="text-x1">{pokemon.name}</h2>
+      <section className="pokemon-header">
+        <img src={left} alt="left" />
+        <p>Bulbasaur</p>
+        <p>#001</p>
+        <img src={slideleft} alt="slideleft" />
+        {/* <img src={} alt="pokemon" /> */}
+        <img src={slideright} alt="slideright" />
+      </section>
+      <section className="pokemon-type"></section>
+      <section className="pokemon-about">
+        <h2>About</h2>
+        <div className="pokemon-weight">weight</div>
+        <div className="pokemon-height">height</div>
+        <div className="pokemon-moves"></div>
+        <p></p>
+      </section>
+
+      {/* <h2 className="text-x1">{pokemon.name}</h2>
       <img src={pokemon.sprites.other["official-artwork"].front_default} />
       <ul>
         {pokemon.types.map((newItem) => (
@@ -32,7 +52,7 @@ export default function Pokemon({ pokemon }) {
         {pokemon.moves.map((item) => (
           <li key={item.move.name}>{item.move.name}</li>
         ))}
-      </ul>
+      </ul> */}
     </>
   );
 }

@@ -2,7 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --dark: #212121;
+  --medium: ##666666;
+  --light: #e0e0e0;
+  --background: #efefef;
+
+  --white: #ffffff;
+}
+
 main {
+  padding: 1rem;
+}
+
+article {
+  position: relative;
+  box-shadow: var(--background);
+  border-radius: 2rem;
+}
+.id-container {
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+  text-align: right;
+}
+.image-container {
+  position: relative;
+  /* top: 1rem; */
+  z-index: 3;
+  width: 10rem;
+  height: 10rem;
+  text-align: center;
+}
+.image-container img {
+  object-fit: contain;
+}
+.name-container {
+  position: relative;
+  top: 0rem;
+  z-index: 2;
+  background-color: var(--background);
+  text-align: center;
+  border-radius: 2rem;
+}
+
+main ul {
   display: grid;
-  grid-template-columns: 150px 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  row-gap: 1.5rem;
 }

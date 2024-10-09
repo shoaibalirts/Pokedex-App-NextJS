@@ -13,6 +13,7 @@ export default function PokeList({ pokemon }) {
               pokemonImage={item.image}
               pokemonName={item.name}
             />
+            ------------
           </Link>
         </li>
       ))}
