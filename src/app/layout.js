@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Pokedex",
+  title: "Pokedex App",
   description: "Gotta catch 'em all!'",
 };
 

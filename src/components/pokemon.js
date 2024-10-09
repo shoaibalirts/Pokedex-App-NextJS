@@ -1,10 +1,9 @@
+import Card from "./card";
+
 export default function Pokemon({ pokemon }) {
   console.log("TypesLength", pokemon.types.length);
-  //   const Colors = Object.freeze({
-  //     normal: { color: "red", hex: "#f00" },
-  //     fighting: { color: "green", hex: "#00f" },
-  //     flying: { color: "blue", hex: "#0f0" },
-  //   });
+  console.log("Pokemon", pokemon.name);
+
   return (
     <>
       <h2 className="text-x1">{pokemon.name}</h2>
