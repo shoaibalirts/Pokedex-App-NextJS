@@ -5,3 +5,17 @@
 
 Note:
 can not console.log("abc") because of SSR. To be used as console.log("hej", pokemon.length)
+
+<h2>Create a layout of the Pokedex App</h2>
+<ul>
+<li>create header that has two components. One is SVG icon and name, and another search bar along with button that should react to number or name</li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+
+</ul>

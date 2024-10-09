@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <h1 className="text-[4rem]">Pokedex</h1>
+        <h1 className="text-[4rem]">HEADER</h1>
         <main>{children}</main>
       </body>
     </html>
