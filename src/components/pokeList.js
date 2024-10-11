@@ -6,7 +6,7 @@ export default function PokeList({ pokemon }) {
     // <ul className="grid grid-cols-3 gap-4 p-4">
     <ul>
       {pokemon.map((item) => (
-        <li key={item.name}>
+        <li key={item.name} className="pokemonListItem">
           <Link href={"/pokemon/" + item.name}>
             <Card
               pokemonID={item.id}

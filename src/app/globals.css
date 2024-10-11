@@ -1,54 +1,157 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer reset, base1, navigation, components1;
 
-:root {
-  --dark: #212121;
-  --medium: ##666666;
-  --light: #e0e0e0;
-  --background: #efefef;
-
-  --white: #ffffff;
-}
-
-main {
-  padding: 1rem;
-}
-
-article {
-  position: relative;
-  box-shadow: var(--background);
-  border-radius: 2rem;
-}
-.id-container {
-  position: relative;
-  z-index: 1;
-  padding: 1rem;
-  text-align: right;
-}
-.image-container {
-  position: relative;
-  /* top: 1rem; */
-  z-index: 3;
-  width: 10rem;
-  height: 10rem;
-  text-align: center;
-}
-.image-container img {
-  object-fit: contain;
-}
-.name-container {
-  position: relative;
-  top: 0rem;
-  z-index: 2;
-  background-color: var(--background);
-  text-align: center;
-  border-radius: 2rem;
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lucida Sans Regular", sans-serif;
+  }
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    font-size: 14px;
+  }
 }
 
-main ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-  row-gap: 1.5rem;
+/* Color variables */
+@layer base1 {
+  :root {
+    --background-color: #dc0a2d;
+    --grayscale-white-color: #ffffff;
+    --grayscale-background-color: #efefef;
+    --grayscale-light-color: #e0e0e0;
+    --grayscale-medium-color: #666666;
+    --grayscale-dark-color: #212121;
+  }
+}
+@layer base1 {
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 16px;
+    background-color: var(--background-color);
+    color: var(--grayscale-white-color);
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+@layer navigation {
+  header {
+    margin: 12px 12px 30px 12px;
+    h1 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    search {
+      width: 100%;
+      margin: 8px 12px;
+      form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 12px;
+
+        .form-container {
+          margin-left: -24px;
+          background-color: var(--grayscale-white-color);
+          padding: 8px 100px 8px 48px;
+          border-radius: 16px;
+
+          input {
+            margin-left: 8px;
+            font-size: 10px;
+            line-height: 16px;
+            border: 0px var(--grayscale-white-color);
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+        .ctaBtn {
+          margin-right: 16px;
+          border-radius: 2rem;
+          padding: 10.67px;
+          border: none;
+        }
+      }
+    }
+  }
+}
+@layer components1 {
+  main {
+    width: 100%;
+    padding: 4px;
+    ul {
+      background-color: var(--grayscale-white-color);
+      border: solid var(--grayscale-white-color);
+      padding: 24px;
+      padding-right: 4px;
+
+      border-radius: 8px;
+      width: 100%;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .pokemonCard {
+        border: 1px solid var(--grayscale-light-color);
+        border-radius: 12px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: var(--grayscale-white-color);
+        width: calc(33.33%-8px);
+        margin-bottom: 8px;
+        margin-right: 10px;
+        .pid {
+          color: var(--grayscale-medium-color);
+          text-align: right;
+          margin-right: 8px;
+          margin-bottom: 4px;
+          margin-top: 4px;
+        }
+        .pimg {
+          width: 100%;
+          height: 72px;
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+        .pname-container {
+          .pname {
+            background-color: var(--grayscale-background-color);
+            color: var(--grayscale-dark-color);
+            padding-top: 24px;
+            text-align: center;
+          }
+        }
+      }
+      @media (width>678px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        row-gap: 1.5rem;
+        .pimg {
+          width: 350px;
+          height: 150px;
+        }
+      }
+    }
+  }
+  footer {
+    * {
+      text-align: center;
+    }
+  }
 }

@@ -5,14 +5,14 @@ export default function Card({ pokemonID, pokemonImage, pokemonName }) {
 
   return (
     // <article className="flex flex-col">
-    <article>
-      <p className="id-container">{pokemonID}</p>
-
+    <article className="pokemonCard">
+      <p className="pid">{pokemonID}</p>
       {/* <img className="w-24 h-24 mx-auto" src={pokemonImage} /> */}
-      <div className="image-container">
-        <img src={pokemonImage} />
+
+      <img src={pokemonImage} className="pimg" />
+      <div className="pname-container">
+        <p className="pname">{pokemonName}</p>
       </div>
-      <p className="name-container">{pokemonName}</p>
     </article>
   );
 }
